@@ -1,0 +1,215 @@
+media:
+  input: assets/media
+  output: /
+content:
+  - name: me
+    label: Author Data
+    type: file
+    path: /data/authors/test.yaml
+    fields:
+      - name: schema
+        type: string
+        default: hugoblox/author/v1
+      - name: slug
+        type: string
+        default: me
+      - name: is_owner
+        type: boolean
+        default: true
+      - name: name
+        type: object
+        fields:
+          - name: display
+            type: string
+          - name: given
+            type: string
+          - name: family
+            type: string
+          # - name: alternate
+          #   type: string
+          # - name: pronunciation
+          #   type: string
+          - name: pronouns
+            type: string
+      - name: postnominals
+        type: string
+        list: true
+      - name: status
+        type: object
+        fields:
+          - name: icon
+            type: string
+            default: "☕️"
+      - name: role
+        type: string
+        default: Professional teacher
+      - name: bio
+        type: text
+
+      - name: affiliations
+        label: Affiliations
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: url
+            label: URL
+            type: string
+
+      - name: links
+        label: Links
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: string
+          - name: url
+            label: URL
+            type: string
+          - name: label
+            label: Label
+            type: string
+
+      - name: links
+        label: Links
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon
+            type: string
+          - name: url
+            label: URL
+            type: string
+          - name: label
+            label: Label
+            type: string
+
+      - name: interests
+        label: Interests
+        type: string
+        list: true
+
+      - name: education
+        label: Education
+        type: object
+        list: true
+        fields:
+          - name: degree
+            label: Degree
+            type: string
+          - name: institution
+            label: Institution
+            type: string
+          - name: start
+            label: Start
+            type: date
+          - name: end
+            label: End
+            type: date
+          - name: summary
+            label: Summary
+            type: text
+          - name: button
+            label: Button
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: string
+              - name: url
+                label: URL
+                type: string
+              - name: icon
+                label: Icon
+                type: string
+
+      - name: experience
+        label: Experience
+        type: object
+        list: true
+        fields:
+          - name: role
+            label: Role
+            type: string
+          - name: org
+            label: Organization
+            type: string
+          - name: start
+            label: Start
+            type: date
+          - name: summary
+            label: Summary
+            type: text
+          - name: button
+            label: Button
+            type: object
+            fields:
+              - name: text
+                label: Text
+                type: string
+              - name: url
+                label: URL
+                type: string
+              - name: icon
+                label: Icon
+                type: string
+
+      - name: skills
+        label: Skills
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: level
+                label: Level
+                type: number
+
+      - name: languages
+        label: Languages
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Language
+            type: string
+          - name: level
+            label: Level
+            type: number
+          - name: label
+            label: Label
+            type: string
+
+      - name: awards
+        label: Awards
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: awarder
+            label: Awarder
+            type: string
+          - name: date
+            label: Date
+            type: date
+          - name: summary
+            label: Summary
+            type: string
+          - name: icon
+            label: Icon
+            type: string

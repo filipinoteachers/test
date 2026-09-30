@@ -1,6 +1,128 @@
 media:
-  input: assets/media
-  output: /
+  - name: images
+    label: Images
+    input: assets/media/
+    output: /
+
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: content/blog
+    format: yaml-frontmatter
+    filename: "{primary}/index.md"
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+
+      - name: summary
+        label: Summary
+        type: string
+
+      - name: date
+        label: Date
+        type: date
+
+      - name: lastmod
+        label: Last Modified
+        type: date
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+
+      - name: authors
+        label: authors
+        type: string
+        list: true
+        default: me
+
+      - name: draft
+        label: Draft
+        type: boolean
+        default: true
+
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+
+      - name: image
+        type: object
+        fields:
+          - name: filename
+            type: image
+            options:
+              media: images
+              path: blog
+          - name: focal_point
+            type: string
+            default: Smart
+          - name: preview_only
+            type: boolean
+            default: true
+          - name: alt_text
+            type: string
+            default: Alt Text
+
+      - name: cover
+        type: object
+        fields:
+          - name: image
+            type: image
+            options:
+              media: images
+              path: blog
+          - name: alt_text
+            type: string
+            default: Alt Text
+          - name: style
+            type: string
+            default: gradient
+          - name: height
+            type: string
+            default: full
+          - name: hidden
+            type: boolean
+            default: false
+          - name: position
+            type: object
+            fields:
+              - name: x
+                type: number
+                default: 50
+                options:
+                  min: 0
+                  max: 100
+              - name: y
+                type: number
+                default: 50
+                options:
+                  min: 0
+                  max: 100
+          - name: fade
+            type: object
+            fields:
+              - name: enabled
+                type: boolean
+                default: true
+          - name: overlay
+            type: object
+            fields:
+              - name: color
+                type: text
+                default: "#000000"
+              - name: opacity
+                type: number
+                default: 0.3
+          
+      - name: body
+        label: Content
+        type: rich-text
+
 content:
   - name: me
     label: Author Data

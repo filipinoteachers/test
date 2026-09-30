@@ -73,21 +73,6 @@ content:
             label: Label
             type: string
 
-      - name: links
-        label: Links
-        type: object
-        list: true
-        fields:
-          - name: icon
-            label: Icon
-            type: string
-          - name: url
-            label: URL
-            type: string
-          - name: label
-            label: Label
-            type: string
-
       - name: interests
         label: Interests
         type: string

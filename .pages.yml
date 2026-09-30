@@ -24,16 +24,22 @@ content:
         type: object
         fields:
           - name: display
+            label: "Display Name e.g. Jose Rizal"
             type: string
           - name: given
+            label: Given Name
             type: string
           - name: family
+            label: Family Name
             type: string
           # - name: alternate
           #   type: string
           - name: pronunciation
+            label: Pronunciation
             type: string
+            default: ho-SEH ree-SAL
           - name: pronouns
+            label: Pronouns
             type: string
       - name: postnominals
         label: Postnominals
@@ -176,6 +182,9 @@ content:
               - name: level
                 label: Level
                 type: number
+                options:
+                  min: 0
+                  max: 5
 
       - name: languages
         label: Languages
@@ -188,6 +197,9 @@ content:
           - name: level
             label: Level
             type: number
+            options:
+              min: 0
+              max: 5
           - name: label
             label: Label
             type: string

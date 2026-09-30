@@ -113,12 +113,15 @@ content:
               - name: text
                 label: Text
                 type: string
+                default: Download my resume
               - name: url
                 label: URL
                 type: string
+                default: /resume.pdf
               - name: icon
                 label: Icon
                 type: string
+                default: hero/arrow-down-tray
 
       - name: experience
         label: Experience
@@ -144,12 +147,15 @@ content:
               - name: text
                 label: Text
                 type: string
+                default: View portfolio
               - name: url
                 label: URL
                 type: string
+                default: "/"
               - name: icon
                 label: Icon
                 type: string
+                default: hero/arrow-down-tray
 
       - name: skills
         label: Skills

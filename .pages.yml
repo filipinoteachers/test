@@ -123,8 +123,8 @@ content:
         label: Content
         type: rich-text
 
-content:
-  - name: me
+
+  - name: author
     label: Author Data
     type: file
     path: /data/authors/test.yaml

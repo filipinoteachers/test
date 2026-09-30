@@ -10,13 +10,17 @@ content:
       - name: schema
         type: string
         default: hugoblox/author/v1
+        hidden: true
       - name: slug
+        label: Slug
         type: string
         default: me
       - name: is_owner
+        label: "Are you the owner of this site?"
         type: boolean
         default: true
       - name: name
+        label: "What's your name?"
         type: object
         fields:
           - name: display
@@ -27,23 +31,27 @@ content:
             type: string
           # - name: alternate
           #   type: string
-          # - name: pronunciation
-          #   type: string
+          - name: pronunciation
+            type: string
           - name: pronouns
             type: string
       - name: postnominals
+        label: Postnominals
         type: string
         list: true
       - name: status
+        label: Status
         type: object
         fields:
           - name: icon
             type: string
             default: "☕️"
       - name: role
+        label: Role
         type: string
         default: Professional teacher
       - name: bio
+        label: Bio
         type: text
 
       - name: affiliations

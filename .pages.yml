@@ -35,9 +35,8 @@ content:
           # - name: alternate
           #   type: string
           - name: pronunciation
-            label: Pronunciation
+            label: "Pronunciation e.g ho-SEH ree-SAL"
             type: string
-            default: ho-SEH ree-SAL
           - name: pronouns
             label: Pronouns
             type: string
